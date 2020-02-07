@@ -5,10 +5,7 @@
 //  Created by Farhana Mustafa on 2/3/20.
 //  Copyright © 2020 Farhana Mustafa. All rights reserved.
 //
-//
-//
-//experimenting combining two codes
-//
+
 import UIKit
 
 class ViewController: UITableViewController {
