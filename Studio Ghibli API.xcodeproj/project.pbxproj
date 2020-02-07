@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F227747B23E8E75E00D23C66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F227747A23E8E75E00D23C66 /* AppDelegate.swift */; };
+		F227747D23E8E75E00D23C66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F227747C23E8E75E00D23C66 /* SceneDelegate.swift */; };
+		F227747F23E8E75E00D23C66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F227747E23E8E75E00D23C66 /* ViewController.swift */; };
+		F227748223E8E75E00D23C66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F227748023E8E75E00D23C66 /* Main.storyboard */; };
+		F227748423E8E75F00D23C66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F227748323E8E75F00D23C66 /* Assets.xcassets */; };
+		F227748723E8E75F00D23C66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F227748523E8E75F00D23C66 /* LaunchScreen.storyboard */; };
+		F227749223E8E75F00D23C66 /* Studio_Ghibli_APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F227749123E8E75F00D23C66 /* Studio_Ghibli_APITests.swift */; };
+		F227749D23E8E75F00D23C66 /* Studio_Ghibli_APIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F227749C23E8E75F00D23C66 /* Studio_Ghibli_APIUITests.swift */; };
+		F22774AC23E8E7EC00D23C66 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22774AB23E8E7EC00D23C66 /* NetworkManager.swift */; };
+		F22774AF23E8EC2000D23C66 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22774AE23E8EC2000D23C66 /* Movie.swift */; };
+		F22774B123E8ED8300D23C66 /* MovieSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22774B023E8ED8300D23C66 /* MovieSummary.swift */; };
+		F22774B823E8F6D100D23C66 /* MovieTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22774B723E8F6D100D23C66 /* MovieTableCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F227748E23E8E75F00D23C66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F227746F23E8E75E00D23C66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F227747623E8E75E00D23C66;
+			remoteInfo = "Studio Ghibli API";
+		};
+		F227749923E8E75F00D23C66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F227746F23E8E75E00D23C66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F227747623E8E75E00D23C66;
+			remoteInfo = "Studio Ghibli API";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F227747723E8E75E00D23C66 /* Studio Ghibli API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Studio Ghibli API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F227747A23E8E75E00D23C66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F227747C23E8E75E00D23C66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F227747E23E8E75E00D23C66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F227748123E8E75E00D23C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F227748323E8E75F00D23C66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F227748623E8E75F00D23C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F227748823E8E75F00D23C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F227748D23E8E75F00D23C66 /* Studio Ghibli APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Studio Ghibli APITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F227749123E8E75F00D23C66 /* Studio_Ghibli_APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Studio_Ghibli_APITests.swift; sourceTree = "<group>"; };
+		F227749323E8E75F00D23C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F227749823E8E75F00D23C66 /* Studio Ghibli APIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Studio Ghibli APIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F227749C23E8E75F00D23C66 /* Studio_Ghibli_APIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Studio_Ghibli_APIUITests.swift; sourceTree = "<group>"; };
+		F227749E23E8E75F00D23C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F22774AB23E8E7EC00D23C66 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F22774AE23E8EC2000D23C66 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		F22774B023E8ED8300D23C66 /* MovieSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSummary.swift; sourceTree = "<group>"; };
+		F22774B723E8F6D100D23C66 /* MovieTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F227747423E8E75E00D23C66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F227748A23E8E75F00D23C66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F227749523E8E75F00D23C66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F227746E23E8E75E00D23C66 = {
+			isa = PBXGroup;
+			children = (
+				F227747923E8E75E00D23C66 /* Studio Ghibli API */,
+				F227749023E8E75F00D23C66 /* Studio Ghibli APITests */,
+				F227749B23E8E75F00D23C66 /* Studio Ghibli APIUITests */,
+				F227747823E8E75E00D23C66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F227747823E8E75E00D23C66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F227747723E8E75E00D23C66 /* Studio Ghibli API.app */,
+				F227748D23E8E75F00D23C66 /* Studio Ghibli APITests.xctest */,
+				F227749823E8E75F00D23C66 /* Studio Ghibli APIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F227747923E8E75E00D23C66 /* Studio Ghibli API */ = {
+			isa = PBXGroup;
+			children = (
+				F22774B223E8EEF700D23C66 /* Movies */,
+				F22774AD23E8EC1200D23C66 /* Models */,
+				F22774AA23E8E77000D23C66 /* Manager */,
+				F227747A23E8E75E00D23C66 /* AppDelegate.swift */,
+				F227747C23E8E75E00D23C66 /* SceneDelegate.swift */,
+				F227747E23E8E75E00D23C66 /* ViewController.swift */,
+				F227748023E8E75E00D23C66 /* Main.storyboard */,
+				F227748323E8E75F00D23C66 /* Assets.xcassets */,
+				F227748523E8E75F00D23C66 /* LaunchScreen.storyboard */,
+				F227748823E8E75F00D23C66 /* Info.plist */,
+			);
+			path = "Studio Ghibli API";
+			sourceTree = "<group>";
+		};
+		F227749023E8E75F00D23C66 /* Studio Ghibli APITests */ = {
+			isa = PBXGroup;
+			children = (
+				F227749123E8E75F00D23C66 /* Studio_Ghibli_APITests.swift */,
+				F227749323E8E75F00D23C66 /* Info.plist */,
+			);
+			path = "Studio Ghibli APITests";
+			sourceTree = "<group>";
+		};
+		F227749B23E8E75F00D23C66 /* Studio Ghibli APIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F227749C23E8E75F00D23C66 /* Studio_Ghibli_APIUITests.swift */,
+				F227749E23E8E75F00D23C66 /* Info.plist */,
+			);
+			path = "Studio Ghibli APIUITests";
+			sourceTree = "<group>";
+		};
+		F22774AA23E8E77000D23C66 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F22774AB23E8E7EC00D23C66 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		F22774AD23E8EC1200D23C66 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F22774AE23E8EC2000D23C66 /* Movie.swift */,
+				F22774B023E8ED8300D23C66 /* MovieSummary.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F22774B223E8EEF700D23C66 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				F22774B723E8F6D100D23C66 /* MovieTableCell.swift */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F227747623E8E75E00D23C66 /* Studio Ghibli API */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F22774A123E8E75F00D23C66 /* Build configuration list for PBXNativeTarget "Studio Ghibli API" */;
+			buildPhases = (
+				F227747323E8E75E00D23C66 /* Sources */,
+				F227747423E8E75E00D23C66 /* Frameworks */,
+				F227747523E8E75E00D23C66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Studio Ghibli API";
+			productName = "Studio Ghibli API";
+			productReference = F227747723E8E75E00D23C66 /* Studio Ghibli API.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F227748C23E8E75F00D23C66 /* Studio Ghibli APITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F22774A423E8E75F00D23C66 /* Build configuration list for PBXNativeTarget "Studio Ghibli APITests" */;
+			buildPhases = (
+				F227748923E8E75F00D23C66 /* Sources */,
+				F227748A23E8E75F00D23C66 /* Frameworks */,
+				F227748B23E8E75F00D23C66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F227748F23E8E75F00D23C66 /* PBXTargetDependency */,
+			);
+			name = "Studio Ghibli APITests";
+			productName = "Studio Ghibli APITests";
+			productReference = F227748D23E8E75F00D23C66 /* Studio Ghibli APITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F227749723E8E75F00D23C66 /* Studio Ghibli APIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F22774A723E8E75F00D23C66 /* Build configuration list for PBXNativeTarget "Studio Ghibli APIUITests" */;
+			buildPhases = (
+				F227749423E8E75F00D23C66 /* Sources */,
+				F227749523E8E75F00D23C66 /* Frameworks */,
+				F227749623E8E75F00D23C66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F227749A23E8E75F00D23C66 /* PBXTargetDependency */,
+			);
+			name = "Studio Ghibli APIUITests";
+			productName = "Studio Ghibli APIUITests";
+			productReference = F227749823E8E75F00D23C66 /* Studio Ghibli APIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F227746F23E8E75E00D23C66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Farhana Mustafa";
+				TargetAttributes = {
+					F227747623E8E75E00D23C66 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					F227748C23E8E75F00D23C66 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = F227747623E8E75E00D23C66;
+					};
+					F227749723E8E75F00D23C66 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = F227747623E8E75E00D23C66;
+					};
+				};
+			};
+			buildConfigurationList = F227747223E8E75E00D23C66 /* Build configuration list for PBXProject "Studio Ghibli API" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F227746E23E8E75E00D23C66;
+			productRefGroup = F227747823E8E75E00D23C66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F227747623E8E75E00D23C66 /* Studio Ghibli API */,
+				F227748C23E8E75F00D23C66 /* Studio Ghibli APITests */,
+				F227749723E8E75F00D23C66 /* Studio Ghibli APIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F227747523E8E75E00D23C66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F227748723E8E75F00D23C66 /* LaunchScreen.storyboard in Resources */,
+				F227748423E8E75F00D23C66 /* Assets.xcassets in Resources */,
+				F227748223E8E75E00D23C66 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F227748B23E8E75F00D23C66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F227749623E8E75F00D23C66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F227747323E8E75E00D23C66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22774AC23E8E7EC00D23C66 /* NetworkManager.swift in Sources */,
+				F227747F23E8E75E00D23C66 /* ViewController.swift in Sources */,
+				F227747B23E8E75E00D23C66 /* AppDelegate.swift in Sources */,
+				F22774B123E8ED8300D23C66 /* MovieSummary.swift in Sources */,
+				F227747D23E8E75E00D23C66 /* SceneDelegate.swift in Sources */,
+				F22774B823E8F6D100D23C66 /* MovieTableCell.swift in Sources */,
+				F22774AF23E8EC2000D23C66 /* Movie.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F227748923E8E75F00D23C66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F227749223E8E75F00D23C66 /* Studio_Ghibli_APITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F227749423E8E75F00D23C66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F227749D23E8E75F00D23C66 /* Studio_Ghibli_APIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F227748F23E8E75F00D23C66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F227747623E8E75E00D23C66 /* Studio Ghibli API */;
+			targetProxy = F227748E23E8E75F00D23C66 /* PBXContainerItemProxy */;
+		};
+		F227749A23E8E75F00D23C66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F227747623E8E75E00D23C66 /* Studio Ghibli API */;
+			targetProxy = F227749923E8E75F00D23C66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F227748023E8E75E00D23C66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F227748123E8E75E00D23C66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F227748523E8E75F00D23C66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F227748623E8E75F00D23C66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F227749F23E8E75F00D23C66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F22774A023E8E75F00D23C66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F22774A223E8E75F00D23C66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z4U96Q4NY9;
+				INFOPLIST_FILE = "Studio Ghibli API/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Kaiser-Permanente.Studio-Ghibli-API";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F22774A323E8E75F00D23C66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z4U96Q4NY9;
+				INFOPLIST_FILE = "Studio Ghibli API/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Kaiser-Permanente.Studio-Ghibli-API";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F22774A523E8E75F00D23C66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z4U96Q4NY9;
+				INFOPLIST_FILE = "Studio Ghibli APITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Kaiser-Permanente.Studio-Ghibli-APITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Studio Ghibli API.app/Studio Ghibli API";
+			};
+			name = Debug;
+		};
+		F22774A623E8E75F00D23C66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z4U96Q4NY9;
+				INFOPLIST_FILE = "Studio Ghibli APITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Kaiser-Permanente.Studio-Ghibli-APITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Studio Ghibli API.app/Studio Ghibli API";
+			};
+			name = Release;
+		};
+		F22774A823E8E75F00D23C66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z4U96Q4NY9;
+				INFOPLIST_FILE = "Studio Ghibli APIUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Kaiser-Permanente.Studio-Ghibli-APIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Studio Ghibli API";
+			};
+			name = Debug;
+		};
+		F22774A923E8E75F00D23C66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z4U96Q4NY9;
+				INFOPLIST_FILE = "Studio Ghibli APIUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Kaiser-Permanente.Studio-Ghibli-APIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Studio Ghibli API";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F227747223E8E75E00D23C66 /* Build configuration list for PBXProject "Studio Ghibli API" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F227749F23E8E75F00D23C66 /* Debug */,
+				F22774A023E8E75F00D23C66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F22774A123E8E75F00D23C66 /* Build configuration list for PBXNativeTarget "Studio Ghibli API" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22774A223E8E75F00D23C66 /* Debug */,
+				F22774A323E8E75F00D23C66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F22774A423E8E75F00D23C66 /* Build configuration list for PBXNativeTarget "Studio Ghibli APITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22774A523E8E75F00D23C66 /* Debug */,
+				F22774A623E8E75F00D23C66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F22774A723E8E75F00D23C66 /* Build configuration list for PBXNativeTarget "Studio Ghibli APIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22774A823E8E75F00D23C66 /* Debug */,
+				F22774A923E8E75F00D23C66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F227746F23E8E75E00D23C66 /* Project object */;
+}
