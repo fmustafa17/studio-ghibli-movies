@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UITableViewController {
 
     var networkLayer = NetworkLayer.shared
-    var movies: [Movie] = [] {
+    var movies: [StudioGhibliMovie] = [] {
         didSet {
             tableView.reloadData()
         }
@@ -47,7 +47,7 @@ class ViewController: UITableViewController {
         if expandedIndexSet.contains(indexPath.row) {
             // Add the detail label and add the constraints to the cell
             cell.addDetailLabel()
-            cell.movieDescriptionLabel.text = movies[indexPath.row].description
+            cell.movieDescriptionLabel.text = movies[indexPath.row].studioGhibliMovieDescription
         } else {
           // if the cell is contracted, remove the detailLabel from the view in order to not calculate this into the new cell height
             cell.removeDetailLabel()

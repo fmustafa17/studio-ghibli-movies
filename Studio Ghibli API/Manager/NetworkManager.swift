@@ -15,22 +15,21 @@ struct NetworkLayer {
     
     static var jsonDecoder: JSONDecoder = {
         let jsonDecoder = JSONDecoder()
-        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+        jsonDecoder.keyDecodingStrategy = .useDefaultKeys
         return jsonDecoder
     }()
     
-    func fetchMovies(successHandler: @escaping ([Movie]) -> Void, errorHandler: @escaping (Error) -> Void) {
+    func fetchMovies(successHandler: @escaping (StudioGhibliMovies) -> Void, errorHandler: @escaping (Error) -> Void) {
         
         let urlRequest = URLRequest(url: URL(string: "https://ghibliapi.herokuapp.com/films")!)
         
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             guard error == nil else {
+                print(error ?? "Error occurred")
                 return
             }
-            
-            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode >= 200 && httpResponse.statusCode < 300 else {
-                return
-            }
+
+            print(response)
             
             guard let data = data else {
                 DispatchQueue.main.async {
@@ -38,17 +37,15 @@ struct NetworkLayer {
                 }
                 return
             }
-            
-           //print(data)
-            
+
             do {
-                let movies = try NetworkLayer.jsonDecoder.decode([Movie].self, from: data)
+                let movies = try NetworkLayer.jsonDecoder.decode(StudioGhibliMovies.self, from: data)
                 
                 DispatchQueue.main.async {
                     successHandler(movies)
                 }
             } catch {
-                
+                print(error)
             }
         }
         task.resume()

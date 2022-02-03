@@ -85,10 +85,10 @@ class MovieTableCell: UITableViewCell {
         self.movieDescriptionLabel.removeFromSuperview()
     }
 
-    func updateData(model: Movie) {
+    func updateData(model: StudioGhibliMovie) {
         iconImageView.image = UIImage(named: "icon.png")
         movieTitleLabel.text = model.title
-        movieDescriptionLabel.text = model.description
+        movieDescriptionLabel.text = model.studioGhibliMovieDescription
     }
 
 }
