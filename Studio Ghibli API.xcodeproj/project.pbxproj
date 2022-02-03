@@ -17,7 +17,6 @@
 		F227749D23E8E75F00D23C66 /* Studio_Ghibli_APIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F227749C23E8E75F00D23C66 /* Studio_Ghibli_APIUITests.swift */; };
 		F22774AC23E8E7EC00D23C66 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22774AB23E8E7EC00D23C66 /* NetworkManager.swift */; };
 		F22774AF23E8EC2000D23C66 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22774AE23E8EC2000D23C66 /* Movie.swift */; };
-		F22774B123E8ED8300D23C66 /* MovieSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22774B023E8ED8300D23C66 /* MovieSummary.swift */; };
 		F22774B823E8F6D100D23C66 /* MovieTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22774B723E8F6D100D23C66 /* MovieTableCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +54,6 @@
 		F227749E23E8E75F00D23C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F22774AB23E8E7EC00D23C66 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F22774AE23E8EC2000D23C66 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		F22774B023E8ED8300D23C66 /* MovieSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSummary.swift; sourceTree = "<group>"; };
 		F22774B723E8F6D100D23C66 /* MovieTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +82,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD17D5E42798F0B4001C8EBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F22774B723E8F6D100D23C66 /* MovieTableCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD17D5E52798F0B4001C8EBE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		F227746E23E8E75E00D23C66 = {
 			isa = PBXGroup;
 			children = (
@@ -107,8 +120,9 @@
 		F227747923E8E75E00D23C66 /* Studio Ghibli API */ = {
 			isa = PBXGroup;
 			children = (
-				F22774B223E8EEF700D23C66 /* Movies */,
 				F22774AD23E8EC1200D23C66 /* Models */,
+				AD17D5E42798F0B4001C8EBE /* View */,
+				AD17D5E52798F0B4001C8EBE /* ViewModel */,
 				F22774AA23E8E77000D23C66 /* Manager */,
 				F227747A23E8E75E00D23C66 /* AppDelegate.swift */,
 				F227747C23E8E75E00D23C66 /* SceneDelegate.swift */,
@@ -151,17 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				F22774AE23E8EC2000D23C66 /* Movie.swift */,
-				F22774B023E8ED8300D23C66 /* MovieSummary.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		F22774B223E8EEF700D23C66 /* Movies */ = {
-			isa = PBXGroup;
-			children = (
-				F22774B723E8F6D100D23C66 /* MovieTableCell.swift */,
-			);
-			path = Movies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,7 +303,6 @@
 				F22774AC23E8E7EC00D23C66 /* NetworkManager.swift in Sources */,
 				F227747F23E8E75E00D23C66 /* ViewController.swift in Sources */,
 				F227747B23E8E75E00D23C66 /* AppDelegate.swift in Sources */,
-				F22774B123E8ED8300D23C66 /* MovieSummary.swift in Sources */,
 				F227747D23E8E75E00D23C66 /* SceneDelegate.swift in Sources */,
 				F22774B823E8F6D100D23C66 /* MovieTableCell.swift in Sources */,
 				F22774AF23E8EC2000D23C66 /* Movie.swift in Sources */,
@@ -406,7 +410,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -460,7 +464,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

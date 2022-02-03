@@ -8,6 +8,11 @@
 
 import Foundation
 
+struct MovieSummary: Codable {
+  let count: Int?
+  let results: [Movie]?
+}
+
 struct Movie: Codable {
     var id: String
     var title: String
