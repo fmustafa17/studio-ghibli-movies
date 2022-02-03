@@ -28,8 +28,6 @@ struct NetworkLayer {
                 print(error ?? "Error occurred")
                 return
             }
-
-            print(response)
             
             guard let data = data else {
                 DispatchQueue.main.async {

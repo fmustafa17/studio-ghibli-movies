@@ -32,7 +32,7 @@ class ViewController: UITableViewController {
         tableView.register(MovieTableCell.self, forCellReuseIdentifier: MovieTableCell.identifier)
 
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 64.0
+        tableView.estimatedRowHeight = 100.0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,7 +49,7 @@ class ViewController: UITableViewController {
             cell.addDetailLabel()
             cell.movieDescriptionLabel.text = movies[indexPath.row].studioGhibliMovieDescription
         } else {
-          // if the cell is contracted, remove the detailLabel from the view in order to not calculate this into the new cell height
+            // if the cell is contracted, remove the detailLabel from the view in order to not calculate this into the new cell height
             cell.removeDetailLabel()
         }
 
@@ -60,39 +60,29 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-            if editingStyle == .delete {
-                tableView.beginUpdates()
-                movies.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .top)
-                tableView.endUpdates()
-            }
+        if editingStyle == .delete {
+            tableView.beginUpdates()
+            movies.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .top)
+            tableView.endUpdates()
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
 
-            // if the cell is already expanded, remove it from the indexset to contract it
-            if expandedIndexSet.contains(indexPath.row) {
-                expandedIndexSet.remove(indexPath.row)
-            } else {
-                // if the cell is not expanded, add it to the indexset to expand it
-                expandedIndexSet.insert(indexPath.row)
-            }
+        // if the cell is already expanded, remove it from the indexset to contract it
+        if expandedIndexSet.contains(indexPath.row) {
+            expandedIndexSet.remove(indexPath.row)
+        } else {
+            // if the cell is not expanded, add it to the indexset to expand it
+            expandedIndexSet.insert(indexPath.row)
+        }
 
-            // this will call cellForRowAt to update the cell's image and detailLabel
-            tableView.reloadData()
+        // this will call cellForRowAt to update the cell's image and detailLabel
+        tableView.reloadData()
 
-//            tableView.beginUpdates()
-//            tableView.endUpdates()
-//            tableView.deselectRow(at: indexPath, animated: true)
+//        tableView.beginUpdates()
+//        tableView.endUpdates()
     }
-    
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath.row == selectedRowIndex {
-//            if dateCellExpanded {
-//                return 280
-//            }
-//        }
-//        return 50
-//    }
 }
