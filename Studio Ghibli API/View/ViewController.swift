@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UITableViewController {
 
-    var networkLayer = NetworkLayer.shared
+    var networkLayer = APIManager.shared
     var movies: [StudioGhibliMovie] = [] {
         didSet {
             tableView.reloadData()
@@ -18,7 +18,7 @@ class ViewController: UITableViewController {
     }
 
     // this will contain the index of the row (integer) that is expanded
-    var expandedIndexSet: IndexSet = []
+    var expandedCellSet: IndexSet = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +35,65 @@ class ViewController: UITableViewController {
         tableView.estimatedRowHeight = 100.0
     }
 
+//    var expandedRow: (indexPath: IndexPath, height: CGFloat)? = nil
+//    var collapsingRow: (indexPath: IndexPath, height: CGFloat)? = nil
+//
+//
+//        override func numberOfSections(in tableView: UITableView) -> Int {
+//            return 1
+//        }
+//
+//
+//
+//        override func tableView(_ tableView: UITableView,
+//                                heightForRowAt indexPath: IndexPath) -> CGFloat {
+//            if indexPath == collapsingRow?.indexPath {
+//                return collapsingRow!.height
+//            } else {
+//                return UITableView.automaticDimension
+//            }
+//        }
+//
+//        override func tableView(_ tableView: UITableView,
+//                                didSelectRowAt indexPath: IndexPath) {
+//            guard let tappedCell = tableView.cellForRow(at: indexPath) as? MyTableViewCell
+//                else { return }
+//
+//            CATransaction.begin()
+//            tableView.beginUpdates()
+//
+//            if let expandedRow = expandedRow,
+//                let prevCell = tableView.cellForRow(at: expandedRow.indexPath)
+//                    as? MyTableViewCell {
+//                prevCell.heightConstraint.constant = prevCell.stackView.frame.height
+//                prevCell.heightConstraint.isActive = true
+//
+//                CATransaction.setCompletionBlock {
+//                    if let cell = tableView.cellForRow(at: expandedRow.indexPath)
+//                        as? MyTableViewCell {
+//                        cell.configureExpansion(false)
+//                        cell.heightConstraint.isActive = false
+//                    }
+//                    self.collapsingRow = nil
+//                }
+//
+//                collapsingRow = expandedRow
+//            }
+//
+//
+//            if expandedRow?.indexPath == indexPath {
+//                collapsingRow = expandedRow
+//                expandedRow = nil
+//            } else {
+//                tappedCell.configureExpansion(true)
+//                expandedRow = (indexPath: indexPath, height: tappedCell.frame.height)
+//            }
+//
+//            tableView.endUpdates()
+//            CATransaction.commit()
+//        }
+
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
     }
@@ -43,8 +102,12 @@ class ViewController: UITableViewController {
         let cell = (tableView.dequeueReusableCell(withIdentifier: MovieTableCell.identifier, for: indexPath) as? MovieTableCell)!
         cell.updateData(model: movies[indexPath.row])
 
+//        let post = posts[indexPath.row]
+//        let isExpanded = expandedRow?.indexPath == indexPath
+//        cell.configure(expanded: isExpanded, post: post)
+
         // if the cell is expanded
-        if expandedIndexSet.contains(indexPath.row) {
+        if expandedCellSet.contains(indexPath.row) {
             // Add the detail label and add the constraints to the cell
             cell.addDetailLabel()
             cell.movieDescriptionLabel.text = movies[indexPath.row].studioGhibliMovieDescription
@@ -72,11 +135,11 @@ class ViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: false)
 
         // if the cell is already expanded, remove it from the indexset to contract it
-        if expandedIndexSet.contains(indexPath.row) {
-            expandedIndexSet.remove(indexPath.row)
+        if expandedCellSet.contains(indexPath.row) {
+            expandedCellSet.remove(indexPath.row)
         } else {
             // if the cell is not expanded, add it to the indexset to expand it
-            expandedIndexSet.insert(indexPath.row)
+            expandedCellSet.insert(indexPath.row)
         }
 
         // this will call cellForRowAt to update the cell's image and detailLabel

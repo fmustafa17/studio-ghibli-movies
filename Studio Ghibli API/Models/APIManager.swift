@@ -1,5 +1,5 @@
 //
-//  NetworkManager.swift
+//  APIManager.swift
 //  Studio Ghibli API
 //
 //  Created by Farhana Mustafa on 2/3/20.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct NetworkLayer {
+struct APIManager {
     
-    static var shared = NetworkLayer()
+    static var shared = APIManager()
     private init(){}
     
     static var jsonDecoder: JSONDecoder = {
@@ -37,7 +37,7 @@ struct NetworkLayer {
             }
 
             do {
-                let movies = try NetworkLayer.jsonDecoder.decode(StudioGhibliMovies.self, from: data)
+                let movies = try APIManager.jsonDecoder.decode(StudioGhibliMovies.self, from: data)
                 
                 DispatchQueue.main.async {
                     successHandler(movies)
