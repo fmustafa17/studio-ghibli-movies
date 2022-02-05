@@ -14,6 +14,8 @@ class MovieTableCell: UITableViewCell {
 
     var cellBottomConstraint: NSLayoutConstraint!
 
+    var boldedTitle: NSAttributedString!
+
     lazy var iconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "icon.png")
@@ -96,7 +98,9 @@ class MovieTableCell: UITableViewCell {
     }
 
     func updateData(model: StudioGhibliMovie) {
-        movieTitleLabel.text = model.title
+        boldedTitle = NSAttributedString(string: model.title, attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)])
+        movieTitleLabel.attributedText = boldedTitle
+
         movieDirectorLabel.text = model.director
         movieDescriptionLabel.text = model.studioGhibliMovieDescription
     }
