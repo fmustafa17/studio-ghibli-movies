@@ -12,7 +12,7 @@ import UIKit
 class MovieTableCell: UITableViewCell {
     static let identifier = "MovieTableCell"
 
-    var cellConfiguration: UIListContentConfiguration!
+    var cellBottomConstraint: NSLayoutConstraint!
 
     lazy var iconImageView: UIImageView = {
         let imageView = UIImageView()
@@ -20,6 +20,7 @@ class MovieTableCell: UITableViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
 
@@ -53,26 +54,23 @@ class MovieTableCell: UITableViewCell {
         movieTitleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
         movieTitleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 10).isActive = true
         movieTitleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20).isActive = true
+        // Initialize the bottom constraint of the contentView since we start out with only showing the title to the user
+        cellBottomConstraint = movieTitleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
+        cellBottomConstraint.isActive = true
 
         // Keep the icon in the center of the title label even when the user taps to expand the cell
         iconImageView.centerYAnchor.constraint(equalTo: movieTitleLabel.centerYAnchor).isActive = true
-
-//        cellConfiguration = self.defaultContentConfiguration()
-//        cellConfiguration.image = UIImage(named: "icon.png")
-//        cellConfiguration.text = "test"
-//        self.contentConfiguration = cellConfiguration
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func updateConfiguration(using state: UICellConfigurationState) {
-
-    }
-
-    /// When the user taps on a cell, the cell expands to reveal more details about what data they're consenting to share with Intuit
+    /// When the user taps on a cell, the cell expands to reveal the description of the movie
     func addDetailLabel() {
+        // Remove constraining the title label to the bottom of the contentView since we need to show the description to the user
+        NSLayoutConstraint.deactivate([cellBottomConstraint])
+
         self.contentView.addSubview(movieDescriptionLabel)
         movieDescriptionLabel.topAnchor.constraint(equalTo: movieTitleLabel.bottomAnchor, constant: 10).isActive = true
         movieDescriptionLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 10).isActive = true
@@ -83,10 +81,10 @@ class MovieTableCell: UITableViewCell {
     /// When the user taps on an expanded cell, the cell will shrink back to originial height to only show the title
     func removeDetailLabel() {
         self.movieDescriptionLabel.removeFromSuperview()
+        NSLayoutConstraint.activate([cellBottomConstraint])
     }
 
     func updateData(model: StudioGhibliMovie) {
-        iconImageView.image = UIImage(named: "icon.png")
         movieTitleLabel.text = model.title
         movieDescriptionLabel.text = model.studioGhibliMovieDescription
     }
