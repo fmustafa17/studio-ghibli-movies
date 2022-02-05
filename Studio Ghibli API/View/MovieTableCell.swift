@@ -32,6 +32,14 @@ class MovieTableCell: UITableViewCell {
         return label
     }()
 
+    lazy var movieDirectorLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.textAlignment = .left
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
     lazy var movieDescriptionLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
@@ -45,21 +53,24 @@ class MovieTableCell: UITableViewCell {
 
         self.contentView.addSubview(iconImageView)
         self.contentView.addSubview(movieTitleLabel)
+        self.contentView.addSubview(movieDirectorLabel)
 
         self.selectionStyle = .none
 
         iconImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
         iconImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5).isActive = true
 
-        movieTitleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
+        movieTitleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20).isActive = true
         movieTitleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 10).isActive = true
         movieTitleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20).isActive = true
-        // Initialize the bottom constraint of the contentView since we start out with only showing the title to the user
-        cellBottomConstraint = movieTitleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
-        cellBottomConstraint.isActive = true
 
-        // Keep the icon in the center of the title label even when the user taps to expand the cell
-        iconImageView.centerYAnchor.constraint(equalTo: movieTitleLabel.centerYAnchor).isActive = true
+        movieDirectorLabel.topAnchor.constraint(equalTo: movieTitleLabel.bottomAnchor, constant: 0).isActive = true
+        movieDirectorLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 10).isActive = true
+        movieDirectorLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20).isActive = true
+
+        // Initialize the bottom constraint of the contentView since we start out with only showing the title and director to the user
+        cellBottomConstraint = movieDirectorLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
+        cellBottomConstraint.isActive = true
     }
 
     required init?(coder: NSCoder) {
@@ -68,11 +79,11 @@ class MovieTableCell: UITableViewCell {
 
     /// When the user taps on a cell, the cell expands to reveal the description of the movie
     func addDetailLabel() {
-        // Remove constraining the title label to the bottom of the contentView since we need to show the description to the user
+        // Remove constraining the director label to the bottom of the contentView since we need to show the description to the user
         NSLayoutConstraint.deactivate([cellBottomConstraint])
 
         self.contentView.addSubview(movieDescriptionLabel)
-        movieDescriptionLabel.topAnchor.constraint(equalTo: movieTitleLabel.bottomAnchor, constant: 10).isActive = true
+        movieDescriptionLabel.topAnchor.constraint(equalTo: movieDirectorLabel.bottomAnchor, constant: 10).isActive = true
         movieDescriptionLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 10).isActive = true
         movieDescriptionLabel.trailingAnchor.constraint(equalTo: movieTitleLabel.trailingAnchor).isActive = true
         movieDescriptionLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -10).isActive = true
@@ -86,6 +97,7 @@ class MovieTableCell: UITableViewCell {
 
     func updateData(model: StudioGhibliMovie) {
         movieTitleLabel.text = model.title
+        movieDirectorLabel.text = model.director
         movieDescriptionLabel.text = model.studioGhibliMovieDescription
     }
 
