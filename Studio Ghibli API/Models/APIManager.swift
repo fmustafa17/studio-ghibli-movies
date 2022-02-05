@@ -9,17 +9,14 @@
 import Foundation
 
 struct APIManager {
-    
-    static var shared = APIManager()
-    private init(){}
-    
+
     static var jsonDecoder: JSONDecoder = {
         let jsonDecoder = JSONDecoder()
         jsonDecoder.keyDecodingStrategy = .useDefaultKeys
         return jsonDecoder
     }()
     
-    func fetchMovies(successHandler: @escaping (StudioGhibliMovies) -> Void, errorHandler: @escaping (Error) -> Void) {
+    func getMovies(successHandler: @escaping (StudioGhibliMovies) -> Void, errorHandler: @escaping (Error) -> Void) {
         
         let urlRequest = URLRequest(url: URL(string: "https://ghibliapi.herokuapp.com/films")!)
         

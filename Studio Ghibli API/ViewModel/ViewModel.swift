@@ -9,6 +9,20 @@
 import Foundation
 import Combine
 
-class ViewModel {
-    
+class ViewModel: ObservableObject {
+    var apiManager: APIManager?
+    @Published var movies: [StudioGhibliMovie] = []
+
+    init(apiManager: APIManager) {
+        self.apiManager = apiManager
+    }
+
+    func fetchMovies() {
+        apiManager?.getMovies(successHandler: { [weak self] (movies) in
+            self?.movies = movies
+        }) { (error) in
+            print("Error occurred: ", error)
+        }
+    }
+
 }
