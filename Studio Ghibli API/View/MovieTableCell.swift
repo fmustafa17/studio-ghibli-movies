@@ -75,7 +75,7 @@ class MovieTableCell: UITableViewCell {
     func addDetailLabel() {
         self.contentView.addSubview(movieDescriptionLabel)
         movieDescriptionLabel.topAnchor.constraint(equalTo: movieTitleLabel.bottomAnchor, constant: 10).isActive = true
-        movieDescriptionLabel.leadingAnchor.constraint(equalTo: movieTitleLabel.leadingAnchor).isActive = true
+        movieDescriptionLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 10).isActive = true
         movieDescriptionLabel.trailingAnchor.constraint(equalTo: movieTitleLabel.trailingAnchor).isActive = true
         movieDescriptionLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -10).isActive = true
     }
