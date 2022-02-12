@@ -10,7 +10,7 @@ import Foundation
 import Combine
 
 class ViewModel: ObservableObject {
-    var apiManager: APIManager?
+    private var apiManager: APIManager?
     @Published var movies: [StudioGhibliMovie] = []
 
     init() {
