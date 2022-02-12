@@ -13,8 +13,8 @@ class ViewModel: ObservableObject {
     var apiManager: APIManager?
     @Published var movies: [StudioGhibliMovie] = []
 
-    init(apiManager: APIManager) {
-        self.apiManager = apiManager
+    init() {
+        self.apiManager = APIManager()
     }
 
     func fetchMovies() {

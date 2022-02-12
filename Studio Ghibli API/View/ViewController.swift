@@ -14,10 +14,7 @@ class ViewController: UITableViewController {
     // this will contain the index of the row (integer) that is expanded
     var expandedCellSet: IndexSet = []
 
-    lazy var viewModel: ViewModel = {
-        let viewModel = ViewModel(apiManager: APIManager())
-        return viewModel
-    }()
+    var viewModel = ViewModel()
 
     private var cancellables: Set<AnyCancellable> = []
 
