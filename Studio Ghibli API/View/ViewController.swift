@@ -53,7 +53,7 @@ class ViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: MovieTableCell.identifier, for: indexPath) as? MovieTableCell)!
-        cell.updateData(model: self.viewModel.movies[indexPath.row])
+        cell.updateData(with: self.viewModel.movies[indexPath.row])
 
         // if the cell is expanded
         if expandedCellSet.contains(indexPath.row) {

@@ -97,12 +97,12 @@ class MovieTableCell: UITableViewCell {
         NSLayoutConstraint.activate([cellBottomConstraint])
     }
 
-    func updateData(model: StudioGhibliMovie) {
-        boldedTitle = NSAttributedString(string: model.title, attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)])
+    func updateData(with movie: StudioGhibliMovie) {
+        boldedTitle = NSAttributedString(string: movie.title, attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)])
         movieTitleLabel.attributedText = boldedTitle
 
-        movieDirectorLabel.text = model.director
-        movieDescriptionLabel.text = model.studioGhibliMovieDescription
+        movieDirectorLabel.text = movie.director
+        movieDescriptionLabel.text = movie.studioGhibliMovieDescription
     }
 
 }
