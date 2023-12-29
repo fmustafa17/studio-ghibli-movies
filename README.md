@@ -1,3 +1,5 @@
+![Movie Still from https://www.ghibli.jp/works/chihiro/](https://res.cloudinary.com/farheezyx3/image/upload/v1703883996/Studio%20Ghibli%20iOS%20App%20Screenshots/chihiro031.jpg)
+
 # Studio Ghibli Movies
 iOS application that displays Studio Ghibli movies using the Studio Ghibli API.
 
