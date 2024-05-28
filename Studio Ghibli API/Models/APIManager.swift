@@ -18,7 +18,7 @@ struct APIManager {
     
     func getMovies(successHandler: @escaping (StudioGhibliMovies) -> Void, errorHandler: @escaping (Error) -> Void) {
         
-        let urlRequest = URLRequest(url: URL(string: "https://ghibliapi.herokuapp.com/films")!)
+        let urlRequest = URLRequest(url: URL(string: "https://ghibliapi.vercel.app/films/")!)
         
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             guard error == nil else {
